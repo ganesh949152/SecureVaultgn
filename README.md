@@ -95,16 +95,24 @@ The extension will hash the password and store the hash and salt locally.
 C. Operation
 
 Login: Enter your Master Password to unlock the vault. This password is held only in memory (session key) while the vault is open.
+
 <img width="392" height="216" alt="SecureVault1" src="https://github.com/user-attachments/assets/91665d43-1ed0-42d3-8ebd-827babc99cd5" />
 
+
 Save/Generate: Use the input fields to save a new credential. The embedded strength checker will provide feedback in real-time.
+
 <img width="391" height="414" alt="SecureVault3" src="https://github.com/user-attachments/assets/b7dece37-f361-44b3-9586-a17d208e0c46" />
 
+
 Encryption: Upon clicking "Save Credential," the data is encrypted using the Master Password and stored in chrome.storage.local.
+
 <img width="472" height="423" alt="SecureVault5" src="https://github.com/user-attachments/assets/182aa264-58de-4dbe-8bdb-22c52dc093d2" />
 
+
 View: Click the Reveal button next to a stored item to decrypt the password using the session key.
+
 <img width="379" height="457" alt="SecureVault6" src="https://github.com/user-attachments/assets/9a1ff073-c997-42a1-9b5f-9bd70d610902" />
+
 
 📂 Project Structure
 
