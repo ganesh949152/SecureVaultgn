@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SecureVault",
+  "version": "1.0",
+  "description": "Password manager extension.",
+  
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  
+  "icons": {
+    "128": "icon.png"
+  }
+}

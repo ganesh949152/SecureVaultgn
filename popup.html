@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SecureVault</title>
+    <style>
+        body { font-family: Arial, sans-serif; width: 300px; padding: 10px; }
+        input { margin-bottom: 8px; width: 95%; padding: 5px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="setup-view" class="hidden">
+        <h3>Set Master Password</h3>
+        <input type="password" id="set-master-pass" placeholder="New Master Password" required>
+        <button id="save-master-pass">Set Password</button>
+        <p style="font-size: 0.8em; color: red;">DO NOT FORGET THIS!</p>
+    </div>
+
+    <div id="login-view" class="hidden">
+        <h3>Login to Vault</h3>
+        <input type="password" id="login-master-pass" placeholder="Master Password" required>
+        <button id="login-button">Unlock Vault</button>
+        <p id="login-error" style="color: red;"></p>
+    </div>
+
+    <div id="vault-view" class="hidden">
+        <h3>SecureVault</h3>
+        
+        <fieldset>
+            <legend>Save New Credential</legend>
+            <input type="text" id="site-name" placeholder="Website">
+            <input type="text" id="username" placeholder="Username/Email">
+            <input type="password" id="password-input" placeholder="Password">
+            <div id="strength-meter" style="height: 5px; background: #eee;"></div>
+            <button id="generate-pass-btn">Generate Strong Password</button>
+            <button id="save-credential-btn">Save Credential</button>
+        </fieldset>
+
+        <h4>Stored Credentials</h4>
+        <ul id="credential-list">
+            <li>No passwords saved.</li>
+        </ul>
+        <button id="logout-button">Lock Vault</button>
+    </div>
+
+    <script src="crypto-js.min.js"></script>
+    <script src="zxcvbn.js"></script>
+    <script src="crypto.js"></script>
+    <script src="popup.js"></script>
+
+</body>
+</html>
